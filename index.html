@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TUTU</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />  
+  <link href="./assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-spy" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <a class="go-to-top btn btn-secondary invisible" onclick="goToTop()">
+    <i class="fa fa-long-arrow-up ps-1 pe-1" aria-hidden="true"></i>
+  </a>
+
+  <nav id="navbar-spy" class="navbar fixed-top navbar-expand navbar-light bg-light top-0 p-0">
+    <div class="container-xxl p-0 pt-2">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Donate Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#update">Latest Update</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#story">Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#documents">Documents</a>
+          </li>
+        </ul>
+        <div class="d-flex d-none d-md-block justify-content-end position-relative">
+          <a class="btn btn-success text-uppercase me-3" type="button" data-action="share/whatsapp/share"
+            onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(location.href),'whatsapp-share-dialog','width=626,height=436');">
+            Share on <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <button class="btn btn-primary text-uppercase me-3" type="button"
+            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');">
+            Share on <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-primary text-uppercase invisible social-menu-nav" data-bs-toggle="collapse"
+            href="#socialMediaCollapse" role="button" aria-expanded="false" aria-controls="socialMediaCollapse">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </button>
+
+          <div class="collapse multi-collapse position-absolute end-0 text-start mt-3" id="socialMediaCollapse">
+            <ul>
+              <li class="btn-social envelope"  onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Donation for Subrata Majumdar');"><i class="fa fa-envelope"></i></li>
+              <li class="btn-social linkedin" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href));"><i class="fa fa-linkedin"></i></li>
+              <li class="btn-social twitter" onclick="window.open('https://twitter.com/intent/tweet?Hey,Donation for Subrata Majumdar');"><i class="fa fa-twitter"></i></li>
+              <li class="btn-social facebook"
+                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');">
+                <i class="fa fa-facebook"></i>
+              </li>
+              <li class="btn-social whatsapp"
+                onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(location.href),'whatsapp-share-dialog','width=626,height=436');">
+                <i class="fa fa-whatsapp"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+  </nav>
+  <div class="d-flex justify-content-end position-fixed top-50 end-0 social-menu d-none d-sm-block">
+    <button class="btn btn-primary text-uppercase" data-bs-toggle="collapse" href="#socialMediaCollapse1" role="button"
+      aria-expanded="false" aria-controls="socialMediaCollapse1">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </button>
+
+    <div class="collapse multi-collapse position-absolute end-0 text-start mt-3" id="socialMediaCollapse1">
+      <ul>
+        <li class="btn-social envelope" onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Donation for Subrata Majumdar');"><i class="fa fa-envelope"></i></li>
+        <li class="btn-social linkedin"  onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href));"><i class="fa fa-linkedin"></i></li>
+        <li class="btn-social twitter" onclick="window.open('https://twitter.com/intent/tweet?Hey,Donation for Subrata Majumdar');"><i class="fa fa-twitter"></i></li>
+        <li class="btn-social facebook"
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');">
+          <i class="fa fa-facebook"></i>
+        </li>
+        <li class="btn-social whatsapp" data-action="share/whatsapp/share"
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(location.href),'whatsapp-share-dialog','width=626,height=436');">
+          <i class="fa fa-whatsapp"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid p-2 text-white d-flex justify-content-center matching">
+    <p class="d-flex align-items-center text-capitalize">
+      <img src="./assets/images/matching-tag.png" class="me-3" /> even a small contribution can change in subrats's life
+    </p>
+  </div>
+
+  <div class="container-lg p-sm-5 pt-3 text-center">
+    <h3 class="heading">
+      My Cousin Subrata Fights Acute Myeloid Leukemia. Please Help Him!
+    </h3>
+    <div class="row mt-5">
+      <div class="col-12 col-md-6 col-sm-5">
+        <div class="card text-white position-relative rounded-3" id="home">
+          <img src="./assets/images/profile.jpg" class="card-img" alt="Subrata Majumder" />
+          <div class="card-img-overlay">
+            <button type="button" class="btn btn-danger position-absolute top-0 end-0 text-uppercase">
+              URGENT
+            </button>
+          </div>
+        </div>
+        <div class="row mt-2 p-0 d-block d-sm-none">
+          <div class="col-12 text-start">
+            <div class="btn-group" role="group" aria-label="group">
+              <button class="btn-social facebook border-0 me-3"
+                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');"><i
+                  class="fa fa-facebook"></i></button>
+              <button class="btn-social whatsapp border-0 me-3" data-action="share/whatsapp/share"
+                onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(location.href),'whatsapp-share-dialog','width=626,height=436');"><i
+                  class="fa fa-whatsapp"></i></button>
+              <button class="btn-social btn-secondary border-0 me-3" data-bs-toggle="modal"
+                data-bs-target="#socialModal"><i class="fa fa-share-alt"></i></button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="progress mt-2 mb-2" style="height: 20px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0"
+                aria-valuemax="100"><span class="progress-value"></span></div>
+            </div>
+            <h6 class="card-text">
+              <span> <strong>₹ 1,47,218 Raised</strong> </span> of ₹ 30,00,000
+            </h6>
+            <a class="text-decoration-underline fs-5 text-success">127 Donors</a>
+          </div>
+
+          <div class="col-12">
+            <h5 class="text-capitalize pt-4 pb-2">
+              Funds will be transferred to the Subrata directly
+            </h5>
+            <div class="d-grid gap-2 col-12 mx-auto">
+              <button class="btn btn-donation text-center btn-lg" type="button" data-bs-toggle="modal"
+                data-bs-target="#donationModal">
+                donate now
+                <span class="d-flex justify-content-center">(Even small contribution can help a lot)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="socialModal" tabindex="-1" aria-labelledby="socialModalLabel" aria-hidden="true">
+          <div class="modal-dialog overflow-hidden">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <h5 class="modal-title" id="socialModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-8 mx-auto">
+                    <div class="d-grid gap-4">
+                      <button class="btn btn-danger btn-block rounded-pill envelope pt-3 pb-3 border-0" onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Donation for Subrata Majumdar');">
+                        <i class="fa fa-envelope pe-2"></i> Email
+                      </button>
+
+                      <button class="btn btn-info text-white btn-block rounded-pill envelope pt-3 pb-3 border-0" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href));">
+                        <i class="fa fa-linkedin pe-2"></i> linkedin
+                      </button>
+
+                      <button class="btn btn-success text-white btn-block rounded-pill envelope pt-3 pb-3 border-0" onclick="window.open('https://twitter.com/intent/tweet?Hey,Donation for Subrata Majumdar');">
+                        <i class="fa fa-twitter pe-2"></i> twitter
+                      </button>
+
+                      <button class="btn btn-warning text-white btn-block rounded-pill envelope pt-3 pb-3 border-0" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');">
+                        <i class="fa fa-facebook pe-2"></i>
+                        facebook
+                      </button>
+                      <button class="btn btn-dark text-white btn-block rounded-pill envelope pt-3 pb-3 border-0"
+                        data-action="share/whatsapp/share"
+                        onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(location.href),'whatsapp-share-dialog','width=626,height=436');">
+                        <i class="fa fa-whatsapp pe-2"></i> whatsapp
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="card-group">
+          <div class="row row-cols-1 row-cols-md-2 g-4 mt-3 text-start">
+            <div class="col">
+              <div class="card h-100">
+                <h6 class="card-header">Campaigner Details</h6>
+                <div class="card-body">
+                  <div class="card-text">Koushik Patra</div>
+                  <p class="card-text">
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                      Kolkata</span>
+                    <span class="text-success"><i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:+9198043 87404" class="text-success">Call</a></span>
+                  </p>
+                  
+                  <div class="card-text">Subho Dutta</div>
+                  <p class="card-text">
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                      Kolkata</span>
+                    <span class="text-success"><i class="fa fa-phone" aria-hidden="true"></i>
+                      <a href="tel:+919330654968" class="text-success">Call</a></span>
+                  </p>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <h6 class="card-header">Beneficiary Details</h6>
+                <div class="card-body">
+                  <p class="card-text">
+                    Subrata Majumder Cousin of Somnath Manna Patient
+                    Hospitalised at
+                  </p>
+                  <p class="fw-600 fw-bolder">
+                    Tata Medical Center, Newtown , Kolkata
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3 d-block d-sm-none">
+          <h6 class="card-header">Donate via Paytm/Google Pay/PhonePe</h6>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6 border border border-top-0 border-start-0 border-bottom-0">
+                <img src="./assets/images/upi_payments.png" alt="upi_payments" class="img-fluid" />
+                <img src="./assets/images/main_qr.png" style="height: 120px !important" alt="main_qr"
+                  class="img-fluid h-50" />
+              </div>
+
+              <div class="col-6">
+                <img src="./assets/images/upi_logo.png" alt="upi_logo.png" class="img-fluid mt-2 mb-2" />
+                <p class="mt-2 mb-2" id="myInput">barca007@ybl</p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-success btn-block rounded-pill" onclick="copyToClipboard()">
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+            <div class="row pt-3">
+              <div class="col-12">
+                <p class="text-success">
+                  Scan the QR code from the app and make payment
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--card-rows-->
+        <div class="card mt-3 text-start" id="update">
+          <h6 class="card-header">Latest Update</h6>
+          <div class="card-body">
+            <p class="mb-5">Dear Donors,</p>
+            <p class="mb-3">
+              We thank you for the immense love and support that you have so
+              far showered upon Subrata Majumder. His fight with blood cancer
+              continues to make life difficult for him as he is currently
+              struggling in the ICU on ventilator support. He has undergone 7
+              cycles of chemotherapy so far and is under medication to
+              stabilize his health.
+            </p>
+            <p class="mb-3">
+              The funds raised on the fundraiser so far will be transferred to
+              the hospital for his medical expenditures.
+            </p>
+            <p class="mb-3">
+              As his treatment continues, we urge you to please continue
+              sharing his fundraiser on your social media platforms and help
+              spread the word. Your support is extremely crucial in getting
+              Subrata a timely treatment. Please share and help him in his
+              hour of need.
+            </p>
+            <div class="card-footer text-center">
+              <a type="button" class="btn btn-outline-success btn-read" href="#updates">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-3 text-start" id="story">
+          <h6 class="card-header">Story</h6>
+          <div class="card-body">
+            <p>
+              <em>My name is </em><strong><em>Somnath Manna and I am raising funds for my cousin, Subrata
+                  Majumdar</em></strong><em>. </em><strong><em>He is the only son of a widow mother and surviving with a
+                  nominal salary out his employment in a private company</em></strong><em>. He has been suffering from
+              </em><strong><em>Acute Myeloid Leukemia.</em></strong><em> He is getting the treatment consultation done
+                from </em><strong><em>Tata Medical Center, 14, MAR(E-W), DH Block, Newtown,
+                  Kolkata.</em></strong><em> </em>
+            </p>
+            <p class="mt-4">
+              <em>We have tried doing all what we can for the treatment and
+                exhausted all our saving. The treatment is costing us </em><strong><em>Rs 30,00,000/-
+                </em></strong><em>and we need funds to continue the treatment. He has always
+                been supportive and given happiness to everyone, can't even
+                image that he is going through lot for health issue.</em>
+            </p>
+            <p class="mt-4">
+              As the amount is quit huge and we are not in a position to
+              secure any more loans, we have tried collecting money from
+              relative. Kindly help me in raising funds for the cousin, and
+              share this fundraiser with all your family and friends.
+            </p>
+            <p class="mt-4">
+              <strong><em>Somnath Manna, his distant cousin has made arrangements for
+                  his treatment at the TMC, Kolkata and is trying to organize
+                  the funds for Subrata. Requesting all kind hearted people to
+                  come forward and donate so that Subrata gets a new lease of
+                  life</em></strong><em>.</em>
+            </p>
+            <p class="mt-4">
+              <em>We are grateful for your help and good wishes!</em>
+            </p>
+
+            <p class="mt-4">
+              <em>Your each contribution is very important!</em>
+            </p>
+          </div>
+        </div>
+        <!--card-->
+        <div class="card text-start mt-3" id="documents">
+          <h6 class="card-header">Documents</h6>
+          <div class="card-body">
+            <img role="button" src="./assets/images/document1.jpg" id="hrefImg" data-bs-toggle="modal" data-bs-target="#gallery"
+              class="img-fluid" />
+            <div class="modal fade" id="gallery" tabindex="-1" aria-labelledby="galleryLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header border-0 text-end text-white">
+                    <a target="_blank" id="downloadSrc" href="./assets/images/document1.jpg" download
+                      class="text-white">
+                      <i class="fa fa-download" aria-hidden="true"></i>
+                    </a>
+
+                    <i class="fa fa-times" aria-hidden="true" data-bs-dismiss="modal" aria-label="Close"></i>
+                  </div>
+                  <div class="modal-body h-100 mx-auto">
+                    <img id="srcImg" alt="img1" src="./assets/images/document1.jpg" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--lightgallery-->
+            <div class="thumb-list text-start mt-5 pb-5" role="button">
+              <img alt="img1" src="./assets/images/document1_thumb.jpg" class="img-fluid pe-3"
+                onclick="getImgUrl('./assets/images/document1.jpg')" />
+            </div>
+          </div>
+        </div>
+        <div class="card mt-3 text-start">
+          <h6 class="card-header">Donate via Bank Transfer</h6>
+          <div class="card-body">
+            <p>
+              Transfer directly to the Bank account of the Fundraiser. Only
+              INR transfers are allowed.
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                - Account number :
+                <span> 4981101001173</span>
+              </li>
+              <li>
+                - Account name :
+                <span class="text-uppercase"> Subrata Majumder</span>
+              </li>
+              <li>- IFSC code : <span class="text-uppercase"> CNRB0004981</span></li>
+              <li></li>
+              <li>For UPI Transaction: <b>barca007@ybl</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-3 text-start" id="updates">
+          <div class="card-header">Updates(1)</div>
+          <div class="card-body">
+            <b>#1 (20 Mar, 2022)</b>
+            <p class="pt-3">Dear Donors,</p>
+            <p class="pt-3">
+              We thank you for the immense love and support that you have so
+              far showered upon Subrata Majumder. His fight with blood cancer
+              continues to make life difficult for him as he is currently
+              struggling in the ICU on ventilator support. He has undergone 7
+              cycles of chemotherapy so far and is under medication to
+              stabilize his health.&nbsp;
+            </p>
+            <p class="pt-3">
+              The funds raised on the fundraiser so far will be transferred to
+              the hospital for his medical expenditures.
+            </p>
+            <p class="pt-3">
+              As his treatment continues, we urge you to please continue
+              sharing his fundraiser on your social media platforms and help
+              spread the word. Your support is extremely crucial in getting
+              Subrata a timely treatment. Please share and help him in his
+              hour of need.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--col-divisition-->
+      <div class="col-12 col-sm-7 col-md-6 d-none d-sm-block">
+        <div class=" sticky-top sticky-offset">
+          <div class="card text-center">
+            <div class="card-body pt-5 pb-5">
+              <div class="card-title">
+                <div class="progress mt-2 mb-2" style="height: 20px;">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuemin="0" aria-valuemax="100"><span class="progress-value"></span></div>
+                </div>
+              </div>
+              <h3 class="card-text">
+                <span>₹ 1,47,218 Raised</span> of ₹ 30,00,000
+              </h3>
+              <a class="text-decoration-underline fs-5 text-success">127 Donors</a>
+            </div>
+          </div>
+          <h5 class="text-capitalize pt-4 pb-2">
+            Funds will be transferred to the Subrata directly
+          </h5>
+          <div class="d-grid gap-2 col-12 mx-auto">
+            <button class="btn btn-donation text-center btn-lg" type="button" data-bs-toggle="modal"
+              data-bs-target="#donationModal">
+              donate now
+              <span class="d-flex justify-content-center">(Even small contribution can help a lot)</span>
+            </button>
+          </div>
+
+          <h5 class="text-capitalize pt-4 pb-2">
+            Every social media share can bring ₹5,000
+          </h5>
+          <div class="d-grid gap-2 col-12 mx-auto">
+            <a class="btn btn-donation text-center btn-lg btn-fb pt-3 pb-3" type="button"
+              onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');">
+              SHARE ON
+              <i class="fa fa-facebook-official text-white" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="card mt-3 d-none d-sm-block">
+            <h6 class="card-header">Donate via Paytm/Google Pay/PhonePe</h6>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6 border border border-top-0 border-start-0 border-bottom-0">
+                  <img src="./assets/images/upi_payments.png" alt="upi_payments" class="img-fluid" />
+                  <img src="./assets/images/main_qr.png" style="height: 120px !important" alt="main_qr"
+                    class="img-fluid h-50" />
+                </div>
+
+                <div class="col-6">
+                  <img src="./assets/images/upi_logo.png" alt="upi_logo.png" class="img-fluid mt-2 mb-2" />
+                  <p class="mt-2 mb-2" id="myInput">barca007@ybl</p>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-outline-success btn-block rounded-pill" onclick="copyToClipboard()">
+                      Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--row-->
+              <div class="row pt-3">
+                <div class="col-12">
+                  <p class="text-success">
+                    Scan the QR code from the app and make payment
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="card mt-3">
+          <h6 class="card-header">Top Influencers</h6>
+          <div class="card-body">
+            <img src="./assets/images/be-the-first-donor-3.webp" class="be-the-first-donor" />
+          </div>
+          <div class="card-footer">
+            <div class="d-grid gap-2 col-12 mx-auto">
+              <button class="btn btn-donation text-center btn-lg" type="button">
+                donate now
+                <span class="d-flex justify-content-center">(Even small contribution can help a lot)</span>
+              </button>
+            </div>
+          </div>
+        </div> -->
+        </div>
+        <!--col-divisition-->
+      </div>
+    </div>
+    <!--main-col-->
+  </div>
+
+  <!-- Donation Modal -->
+  <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="donationModalLabel">Donate Now</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-decoration-underline">Donate via Paytm/Google Pay/PhonePe</h4>
+          <div class="row">
+            <div class="col-6 border border border-top-0 border-start-0 border-bottom-0">
+              <img src="./assets/images/upi_payments.png" alt="upi_payments" class="img-fluid" />
+              <img src="./assets/images/main_qr.png" style="height: 120px !important" alt="main_qr"
+                class="img-fluid h-50" />
+            </div>
+
+            <div class="col-6">
+              <img src="./assets/images/upi_logo.png" alt="upi_logo.png" class="img-fluid mt-2 mb-2" />
+              <p class="mt-2 mb-2" id="myInput">barca007@ybl</p>
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-success btn-block rounded-pill" onclick="copyToClipboard()">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5">
+            <h4 class="text-decoration-underline">
+              Transfer directly to the Bank account of the Fundraiser. Only
+              INR transfers are allowed.
+            </h4>
+            <ul class="list-unstyled">
+              <li>
+                - Account number :
+                <span class="fw-bold"> 4981101001173</span>
+              </li>
+              <li>
+                - Account name :
+                <span class="fw-bold"> Subrata Majumder</span>
+              </li>
+              <li>- IFSC code : <span class="fw-bold"> CNRB0004981</span></li>
+              <li></li>
+              <li>For UPI Transaction: <b>barca007@ybl</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Donation Modal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    function getImgUrl(url) {
+      document.getElementById("hrefImg").src = url;
+      document.getElementById("srcImg").src = url;
+      document.getElementById("downloadSrc").href = url;
+    }
+
+    function toggleShareOption() {
+      document.querySelector('.sharing-options').classList.toggle('d-none')
+    }
+
+
+
+    window.onscroll = function () {
+      if (window.scrollY > 600) {
+        document.querySelector(".social-menu-nav").classList.remove('invisible')
+        document.querySelector(".social-menu").classList.add('invisible')
+        document.querySelector(".go-to-top").classList.remove('invisible')
+
+      }
+      else {
+        document.querySelector(".social-menu-nav").classList.add('invisible')
+        document.querySelector(".social-menu").classList.remove('invisible')
+        document.querySelector(".go-to-top").classList.add('invisible')
+      }
+    }
+
+    function goToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function copyToClipboard() {
+      /* Get the text field */
+      var copyText = document.getElementById("myInput").textContent;
+      // Create a "hidden" input
+      var aux = document.createElement("input");
+
+      // Assign it the value of the specified element
+      aux.setAttribute("value", document.getElementById("myInput").innerHTML);
+
+      // Append it to the body
+      document.body.appendChild(aux);
+
+      // Highlight its content
+      aux.select();
+
+      // Copy the highlighted text
+      document.execCommand("copy");
+
+      // Remove it from the body
+      document.body.removeChild(aux);
+    }
+
+    const result = Math.round((147218 / 3000000) * 100)
+    console.log("result", result)
+    document.querySelector(".progress-value").innerHTML = result + '%'
+    $('.progress-bar').css('width', result + '%').attr('aria-valuenow', result);
+    $('.progress-value').html(result + '%')
+  </script>
+</body>
+
+</html>

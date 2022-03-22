@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Hind+Vadodara&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Hind+Vadodara&family=Shadows+Into+Light&display=swap");
+body {
+  font-family: "Hind Vadodara", sans-serif !important;
+  background: #f2f2f2;
+}
+p {
+  margin-bottom: 0 !important;
+}
+h5 {
+  font-family: "Shadows Into Light", cursive !important;
+}
+.matching {
+  filter: drop-shadow(0 0 12.5px rgba(0, 0, 0, 0.34)) !important;
+  background-image: linear-gradient(-270deg, #21966c, #39cf9a) !important;
+  margin-top: 60px;
+}
+
+.btn-donation {
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff !important;
+  background: #ff8502;
+  border: 1px solid #ff8502;
+  text-transform: uppercase;
+}
+.btn-donation span {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.btn-fb {
+  background-color: #4c69ba;
+  border-color: #4c69ba;
+  line-height: 22px;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff !important;
+  border-radius: 33px;
+  text-transform: uppercase;
+}
+
+#socialModal .modal-dialog, #documents .modal-dialog{
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  height: 100vh !important;
+}
+#documents .modal-content {
+  background-color: #000;
+}
+
+#socialModal .modal-content {
+  background-color: rgba(0,0,0, 0.7);
+}
+#socialModal .btn-close, #documents .btn-close {
+  filter: invert(1);
+  opacity: 1 !important;
+}
+#documents .modal-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding-right: 40px;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+#socialModal .modal-body, #documents .modal-body {
+  min-height: 100vh;
+}
+.card {
+  background: #fff;
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
+
+h6.card-header {
+  background: #fff;
+  /* border-top-left-radius: 1rem!important;
+  border-top-right-radius: 1rem!important; */
+  font-size: 20px;
+}
+.card-footer {
+  background: #fff;
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+  font-size: 20px;
+}
+.btn {
+  border-radius: 1rem !important;
+}
+.go-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  z-index: 1030;
+}
+.navbar {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%) !important;
+  height: 60px !important;
+}
+.nav-link {
+  color: #666 !important;
+  font-size: 18px !important;
+}
+.sharing {
+  transition: all 0.2s ease-in-out;
+}
+.nav-link.active {
+  border-bottom: 2px solid #21966c;
+  color: #21966c !important;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.collapse ul {
+  list-style: none;
+}
+.btn-social {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.btn-social.envelope, .modal-body .btn-danger {
+  background: #e30101 !important;
+}
+
+.btn-social.linkedin, .modal-body .btn-info {
+  background: #0077b5 !important;
+}
+
+.modal-body .btn-success{
+  background: #55acee !important;
+}
+
+.btn-social.facebook, .modal-body .btn-warning {
+  background: #3b5999 !important;
+}
+
+.btn-social.whatsapp, .modal-body .btn-dark {
+  background: #01c051 !important;
+}
+.twitter {
+  background: #55acee !important;
+}
+
+.sticky-offset {
+  top: 80px;
+}
+
+.modal-body i{
+  border-right: 2px solid hsla(0,0%,100%,.8);
+  
+}
+.modal-body .btn {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-link {
+    font-size: 14px !important;
+  }
+}
